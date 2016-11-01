@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/nbtippetts/node_massive/issues"
   },
-  "homepage": "https://github.com/nbtippetts/node_massive#readme"
+  "homepage": "https://github.com/nbtippetts/node_massive#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cors": "^2.8.1",
+    "express": "^4.14.0",
+    "massive": "^2.5.0"
+  }
 }
