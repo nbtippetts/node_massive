@@ -1,0 +1,13 @@
+<div class="all-products">
+  {{product.name}}
+  {{product.description}}
+  {{product.price}}
+  <img ng-src="{{product.imageurl}}" alt="product.imageurl" height="200px" width="200px"></img>
+
+  <button ng-click="delete(product.id)">Delete</button>
+ <form>
+  <input id="description" type="text" ng-model="product.description" placeholder="product description">
+  <button ng-click="update(product.id)">update</button>
+</form>
+
+</div>

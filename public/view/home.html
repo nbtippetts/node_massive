@@ -1,0 +1,17 @@
+<div class="home-wrapper">
+
+  <form class="getOne">
+   <input id="name" type="text" ng-model="product.name" placeholder="product Name">
+   <br />
+   <input id="description" type="text" ng-model="product.description" placeholder="product description">
+   <br />
+   <input id="price" type="text" ng-model="product.price" placeholder="product price">
+   <br />
+   <input id="imageurl" type="text" ng-model="product.imageurl" placeholder="product imageurl">
+   <br />
+
+<!--   need a button instead?-->
+<!--    <a ui-sref="profile" ng-click="login(user.userName, user.password)">Login</a>-->
+   <button ng-click="create(product)">Create New Product</button>
+ </form>
+ </div>

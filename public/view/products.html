@@ -1,0 +1,9 @@
+<div class="all-products-wrapper">
+  <div class="all-products" ng-repeat="all in allProducts">
+    {{all.name}}
+    {{all.price}}
+    <img ng-src="{{all.imageurl}}" alt="all.imageurl" height="200px" width="200px" ui-sref="details({id: all.id})"></img>
+
+  </div>
+
+</div>

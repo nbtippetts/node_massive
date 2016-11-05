@@ -6,7 +6,7 @@ var app = require('./server');
     create: function(req, res, next){
       var db = app.get('db');
 
-      db.create_product(function(err, product){
+      db.create_product([req.body.name, req.body.description, req.body.price, req.body.imageurl], function(err, product){
            res.send(product)
       })
     },
@@ -22,7 +22,7 @@ var app = require('./server');
     getOne: function(req, res, next){
       var db = app.get('db');
 
-      db.read_product([req.query.id], function(err, products){
+       db.read_product([req.query.id], function(err, products){
         res.send(products)
       })
     },
@@ -30,8 +30,10 @@ var app = require('./server');
     update: function(req, res, next){
        var db = app.get('db');
 
-       db.update_product([req.query.id, 'This stuff will put you on your ass'], function(err, product){
-         res.send(product)
+       db.update_product([req.query.id, req.body.description], function(err, product){
+         db.read_product([req.query.id], function(err, products){
+          res.send(products)
+        })
        })
     },
 
